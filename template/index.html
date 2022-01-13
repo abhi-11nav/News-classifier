@@ -1,0 +1,54 @@
+ <!DOCTYPE HTML>
+<html lang='en'>
+
+<head>
+	<meta charset = "UTF=8">
+	<title> FAKE NEWS CLASSIFIER </title>
+	<style type="text/css">
+		form{
+			margin-left: 600px;	
+		}
+		h1{
+			text-align: center;
+			background-color: lightgray;
+			padding: 0px 20px 0px;
+		}
+		label{
+			padding-bottom: 20px;
+		}
+		.features{
+			padding-bottom: 20px;
+			margin-bottom: 20px;
+		}
+
+		button{
+			padding: 10px;
+			font-size: 15px;
+		}
+
+	</style>
+</head>
+
+<body>
+	<div class="login">
+		<h1> FAKE NEWS CLASSIFIER </h1>
+		<form action="{{ url_for('predict')}}"method="post">
+    		<input class="features" type="text" name="url" placeholder="URL" required="required"/><br>
+        	<input class="features" type="text" name="headline" placeholder="Headline" required="required"/><br>
+			<input class="features" type="text" name="body" placeholder="Body of news article" required="required"/><br>
+			
+        	<button type="SUBMIT" class="btn btn-primary btn-block btn-large">predict</button>
+    	</form>
+
+  		 <br>
+   		<br>
+   		
+   		<div id="prediction_text">
+   		{{ prediction_text }}
+   		</div>
+
+ 	</div>
+
+</body>
+</html> 
+</body>
