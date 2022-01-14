@@ -56,7 +56,7 @@ def predict():
             #Elminating punctuations from sentences as they do not add value. 
             for x in empty_input_list:
                 if x in string.punctuation:
-                    empty_input_list = empty_input_list.replace(x,"")
+                    empty_input_list = empty_input_list.replace(x," ")
                     
         text_preprocessing(empty_input_list,input_list)
         
